@@ -62,4 +62,5 @@ export function loginReducer(state = loginState, action) {
 
 export default combineReducers({
     friends: friendsReducer,
+    login: loginReducer,
 });
