@@ -1,13 +1,17 @@
 import { combineReducers } from 'redux';
 import * as actionTypes from '../actions/actionTypes';
+
 const initialState = {
     deletingFriend: false,
     fetchingFriends: false,
     friends: [],
-    loggingIn: false,
     addingFriend: false,
     updatingFriend: false,
     error: null
+}
+
+const loginState = {
+    loggingIn: false,
 }
 
 export function friendsReducer(state = initialState, action) {
@@ -44,3 +48,18 @@ export function friendsReducer(state = initialState, action) {
             return state;
     }
 }
+
+export function loginReducer(state = loginState, action) {
+    switch(action.type) {
+        case(actionTypes.LOGGING_IN):
+            return { ...state, loggingIn: true };
+        case(actionTypes.LOGGING_IN_END):
+            return { ...state, loggingIn: false };
+        default:
+            return state;
+    }
+}
+
+export default combineReducers({
+    friends: friendsReducer,
+});
