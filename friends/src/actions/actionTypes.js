@@ -1,7 +1,9 @@
 export const FETCHING_FRIENDS = 'FETCHING_FRIENDS';
-export const FETCHING_FRIENDS_END = 'FETCHING_FRIENDS_END';
 export const SET_FRIENDS = 'SET_FRIENDS';
 export const DELETING_FRIEND = 'DELETING_FRIEND';
 export const ADDING_FRIEND = 'ADDING_FRIEND';
+export const UPDATING_FRIEND = 'UPDATING_FRIEND';
 export const LOGGING_IN = 'LOGGING_IN';
 export const LOGGING_IN_END = 'LOGGING_IN_END';
+export const ERROR = 'ERROR';
+export const SUCCESS = 'SUCCESS';
